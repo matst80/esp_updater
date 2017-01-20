@@ -1,0 +1,23 @@
+{
+  "name": "esp_updater",
+  "version": "1.0.0",
+  "description": "Esp updater - consul version",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matst80/esp_updater.git"
+  },
+  "keywords": [
+    "esp8266",
+    "ota"
+  ],
+  "author": "Mats Törnberg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matst80/esp_updater/issues"
+  },
+  "homepage": "https://github.com/matst80/esp_updater#readme"
+}
