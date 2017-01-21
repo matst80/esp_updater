@@ -2,6 +2,34 @@
 
 <head></head>
 
-<body>Hejsan</body>
+<body>
+    <ul id="nodelist">
+
+    </ul>
+    <script type="text/javascript">
+        var el = document.getElementById('nodelist');
+
+        function getJson(url, cb) {
+            var oReq = new XMLHttpRequest();
+            oReq.addEventListener("load", function() {
+                cb(eval('(' + this.responseText + ')'));
+            });
+            oReq.open("GET", url);
+            oReq.send();
+        }
+
+        function getNodes(cb) {
+            getJson('/api/nodes', cb);
+        }
+        getNodes(function(d) {
+            //console.log(d);
+            for (var i in d) {
+                var li = document.createElement('li');
+                li.innerHTML = '<span>' + i + '</span>';
+                el.appendChild(li);
+            }
+        });
+    </script>
+</body>
 
 </html>
